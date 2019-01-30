@@ -19,6 +19,6 @@ Install PostgreSQL
 python manage.py migrate
 
 ## Run the Dev Server
-Edit settings.py ALLOWED_HOSTS =   `['vagrantbox ip'] `
+Edit settings.py `ALLOWED_HOSTS = ['vagrantbox ip'] `
 ### This allows access into the Vagrant box
 python manage.py runserver 0.0.0.0:8001
