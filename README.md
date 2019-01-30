@@ -9,11 +9,16 @@ Install Vagrant
 **Step Two:**
 In a terminal, run `vagrant up`
 
-## Install pipenv for python virtual environment
-pip3 install pipenv
 
-### switch to pipenv shell
-pipenv shell
+## Setting up the database
 
-### install django and components
-pipenv install django djangorestframework django-rest-knox
+**Step 1**
+Install PostgreSQL
+
+**Step 2**
+python manage.py migrate
+
+## Run the Dev Server
+Edit settings.py ALLOWED_HOSTS =   `['vagrantbox ip'] `
+### This allows access into the Vagrant box
+python manage.py runserver 0.0.0.0:8001

@@ -5,11 +5,15 @@ apt-get upgrade
 #install python-pip
 apt-get install python3-pip
 
-#install pip-env for python virtual environment
+#Set up the database 
+sudo apt-get update
+sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
+
+#install pipenv
 pip3 install pipenv
 
-#switch to pipenv shell
+#enter the pipenv virtual shell
 pipenv shell
 
-#install django and components
+# install django and components
 pipenv install django djangorestframework django-rest-knox
